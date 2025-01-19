@@ -6,7 +6,7 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
+  font-family: "Noto Serif KR", sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -42,10 +42,13 @@ section,
 summary { /* 1 */
   display: block;
 }
+article h2,article h3 { font-size: 18px; }
+
 
 /**
  * Add the correct display in IE 9-.
  */
+
 
 audio,
 canvas,
@@ -223,7 +226,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  font-family: monospace, "Noto Serif KR", monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 

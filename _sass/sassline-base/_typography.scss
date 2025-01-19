@@ -31,6 +31,7 @@ a {
   }
 }
 
+.article--post h2 { font-size:24px !important; }
 // Styles for typeset text.
 .typeset {
 
@@ -64,8 +65,14 @@ a {
     font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
     font-style: normal;
     font-weight: map-get($headingtype, bold);
+    font-size: 18px ;
   }
-
+  h1 {
+    font-size: 38px !important;
+  }
+  h4 strong, h3 strong {
+    font-size: 24px !important;
+  } 
   // Heading level 1.
   h1, .alpha {
     @include sassline($fontsize: alpha, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
@@ -218,7 +225,7 @@ a {
     font-style: normal;
     font-weight: map-get($headingtype, regular);
     width: 100%;
-
+    margin:50px auto;
     thead {
 
       th {
@@ -273,7 +280,7 @@ a {
       border-left: 0.15rem solid $linkColour;
       font-style: map-get($bodytype, italic);
       padding-left: 1rem;
-
+      background-color: #f7f7f7;
       // Add spacing below blockquote paragraphs to align to baseline grid.
       $get-scale: map-get($modular-scale, scale-0);
       $get-size: map-get($get-scale, zeta);
@@ -281,8 +288,10 @@ a {
       $baseline-shift: #{($get-size / 2 * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001};
       $baseline-push: #{3 - (($get-size * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001)};
 
+      margin-top:  15px;
       margin-bottom: #{$baseline-push}rem;
       padding-bottom: #{$baseline-shift}rem;
+      font-size:18px;
 
       @for $i from 2 through $breakpoints-limit {
         $get-scale: map-get($modular-scale, scale-#{$i - 1});
@@ -323,6 +332,7 @@ a {
 
   pre {
     display: block;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     padding: 1rem;
     white-space: pre;

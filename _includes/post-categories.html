@@ -1,7 +1,6 @@
 {% for category in site.categories %}
   {% assign category_name = category | first %}
   <section class="section  typeset">
-    <h2 id="{{ category_name | slugify }}">{{ category_name }}</h2>
     <ul class="list  list--posts">
       {% for page in site.categories[category_name] %}
         {% assign has_categories = true %}
@@ -9,7 +8,7 @@
           <article class="article  article--post  typeset">
             <h3><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h3>
             {% include post-meta.html %}
-            {{ page.excerpt | truncatewords: 60 | markdownify }}
+            {{ page.excerpt | truncatewords:20 | markdownify }}
           </article>
         </li>
       {% endfor %}

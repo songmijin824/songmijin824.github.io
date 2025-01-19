@@ -1,12 +1,12 @@
 ---
-title: 자바스크립트의 기본 자료형
+title: 기본 자료형
 categories:
-- ["자바스크립트", "기본 자료형"]
+- 자바스크립트
 feature_image: "https://picsum.photos/2560/600?image=872"
 ---
 
+자바스크립트에서 기본 자료형(Primitive Data Types)은 값이 하나로 고정되어 있는 단순한 데이터 유형입니다. 자바스크립트의 자료형은 크게 **기본 자료형(Primitive Types)**과 **참조 자료형(Reference Types)**으로 나뉩니다.
 
-## 자바스크립트의 기본 자료형
 
 | 객체타입 | 값 | 설명 |
 |--|--|--|
@@ -23,20 +23,20 @@ feature_image: "https://picsum.photos/2560/600?image=872"
 
 > **숫자형(Number)**은 숫자를 표현하는 기본 데이터 타입입니다. 숫자형은 정수와 실수를 모두 처리할 수 있으며, 수학적 계산 및 비교에 사용
 
-**숫자형의 특징**
+#### **숫자형의 특징**
 
 -   **정수**와 **실수**를 모두 포함합니다.
 -   `Number` 타입은 부동소수점 방식으로 숫자를 처리합니다.
 -   자바스크립트에서 숫자는 `number` 타입으로 하나의 타입만 존재하며, `int`, `float` 같은 구분은 없습니다.
 
-**숫자형 기본**
+#### **숫자형 기본**
 
     let num1 = 10; // 정수
     let num2 = 3.14; // 실수
     let num3 = -5; // 음수
     let num4 = 0; // 0
     
-**숫자형 연산**
+#### **숫자형 연산**
 
     let a = 5; 
     let b = 3; 
@@ -47,7 +47,7 @@ feature_image: "https://picsum.photos/2560/600?image=872"
     console.log(a % b); // 2 (나머지) 
     console.log(a ** b); // 125 (거듭제곱)
 
-**비교 연산자(`>`, `<`, `>=`, `<=`, `===`, `!==`)를 통해 비교**
+#### **비교 연산자(`>`, `<`, `>=`, `<=`, `===`, `!==`)를 통해 비교**
 
     let x = 10; 
     let y = 5; 
@@ -61,18 +61,18 @@ feature_image: "https://picsum.photos/2560/600?image=872"
 
 > **문자형(String)**은 텍스트 데이터를 다루는 기본 데이터 타입입니다. 문자열은 문자들의 집합으로, 텍스트를 표현할 때 사용됩니다. 문자열은 **작은따옴표('')**, **큰따옴표("")**, 또는 **백틱(``)**을 사용하여 생성할 수 있습니다.
 
-**문자열 기본**
+#### **문자열 기본**
 
     let str1 = "Hello, World!";  // 큰따옴표 사용
     let str2 = 'Hello, World!';  // 작은따옴표 사용
     let str3 = `Hello, World!`;  // 백틱 사용
 
-**문자열의 길이 (length)**
+#### **문자열의 길이 (length)**
 
     let str = "JavaScript";
     console.log(str.length); // 10 (문자열의 길이)
 
-**문자열 결합 (Concatenation)**
+#### **문자열 결합 (Concatenation)**
 
     let str1 = "Hello";
     let str2 = "World";
@@ -84,16 +84,18 @@ feature_image: "https://picsum.photos/2560/600?image=872"
     let result = `${str1} ${str2}`; // 템플릿 리터럴을 사용한 문자열 결합
     console.log(result);  // Hello World
 
-**문자열 찾기**
--   **`indexOf()`**: 특정 문자열이 처음 나타나는 위치를 반환합니다. 찾지 못하면 `-1`을 반환합니다.
--   **`includes()`**: 특정 문자열이 포함되어 있는지 여부를 `true` 또는 `false`로 반환합니다.
-    -------
-    let str = "JavaScript is fun!";
-    console.log(str.indexOf("is"));    // 11 (첫 번째 위치)
-    console.log(str.includes("fun"));  // true
-    console.log(str.includes("Python")); // false
+#### **문자열 찾기**
 
-**템플릿 리터럴 (Template Literals)**
+- `indexOf()`: 특정 문자열이 처음 나타나는 위치를 반환합니다. 찾지 못하면 `-1`을 반환합니다.
+- `includes()`: 특정 문자열이 포함되어 있는지 여부를 `true` 또는 `false`로 반환합니다.
+    
+     <pre><code>
+      let str = "JavaScript is fun!";
+      console.log(str.indexOf("is"));    // 11 (첫 번째 위치)
+      console.log(str.includes("fun"));  // true
+      console.log(str.includes("Python")); // false
+    </code></pre>
+#### **템플릿 리터럴 (Template Literals)**
 
 > 템플릿 리터럴은 **백틱(``)**을 사용하여 문자열을 작성하는 방법입니다.
 
@@ -107,7 +109,7 @@ feature_image: "https://picsum.photos/2560/600?image=872"
 
 > **불린형(Boolean)**은 **`true`** 또는 **`false`** 두 값만을 가질 수 있는 데이터 타입입니다. 불린형은 주로 조건문에서 **참/거짓**을 판단할 때 사용되며, **논리 연산**을 수행할 때 중요합니다.
 
-**불 대수**
+#### **불 대수**
  
  - And 연산자 (`&&`) : 두 값이 모두 `true`일 때만 `true`를 반환합니다.
 
@@ -150,7 +152,7 @@ feature_image: "https://picsum.photos/2560/600?image=872"
     console.log(!b);  // true
 
 
-**불린형 기본**
+#### **불린형 기본**
 
     let isActive = true;  // 참
     let isFinished = false;  // 거짓
@@ -158,7 +160,7 @@ feature_image: "https://picsum.photos/2560/600?image=872"
     let bool2 = Boolean(false); // false
 
 
-**불린형 값의 자동 변환 (타입 강제 변환)**
+#### **불린형 값의 자동 변환 (타입 강제 변환)**
 
 > 자바스크립트에서는 다른 타입을 불린형으로 자동 변환할 수 있습니다.
 
@@ -174,7 +176,7 @@ feature_image: "https://picsum.photos/2560/600?image=872"
     console.log(Boolean(null)); // false 
     console.log(Boolean({})); // true
 
-**불린형 비교**
+#### **불린형 비교**
 
 > 비교 연산자는 **`==`**, **`===`**, **`!=`**, **`!==`**, **`>`**, **`<`** 등을 사용할 수 있습니다.
 
@@ -187,7 +189,7 @@ feature_image: "https://picsum.photos/2560/600?image=872"
     console.log(isLoggedIn === false); // true
 
 
-**if 문 사용**
+#### **if 문 사용**
 
     let isLoggedIn = true;
     if (isLoggedIn) {
@@ -196,7 +198,7 @@ feature_image: "https://picsum.photos/2560/600?image=872"
 	    console.log("Please log in.");
     }
 
-**삼항 연산자 사용**
+#### **삼항 연산자 사용**
 
 > 삼항 연산자는 조건문을 간단하게 표현하는 방법입니다. 불린형을 사용하여 `true` 또는 `false`일 때 실행할 내용을 지정할 수 있습니다.
 
@@ -206,3 +208,58 @@ feature_image: "https://picsum.photos/2560/600?image=872"
     // 'true'일때 "Online" : 'false'일때 "Offline" 반환
     console.log(status);  // Offline
 
+
+
+##  typeof 연산자
+
+> **`typeof`** 연산자는 **데이터 타입**을 확인하는 데 사용되는 연산자입니다. 이 연산자는 변수나 표현식의 **타입**을 문자열 형태로 반환합니다. `typeof`는 특히 **디버깅**이나 **타입 검사**를 할 때 유용하게 사용됩니다.
+
+### **`typeof`의 동작 방식**
+
+#### **숫자형 (Number)**
+
+    let num = 42;
+    console.log(typeof num);  // "number"
+
+#### **불린형 (Boolean)**
+
+    let isActive = true;
+    console.log(typeof isActive);  // "boolean"
+
+
+#### **객체형 (Object)**
+
+    let obj = { name: "Alice", age: 25 };
+    console.log(typeof obj);  // "object"
+
+#### **배열 (Array)**
+`typeof`는 기본 타입의 값을 확인할 수 있지만, **객체**와 **배열**을 구별하지 못합니다. 배열을 정확히 확인하려면 **`Array.isArray()`** 메서드를 사용하는 것이 좋습니다.
+
+    let arr = [1, 2, 3];
+    console.log(typeof arr);  // "object"
+    console.log(Array.isArray(arr));  // true
+
+#### **함수 (Function)**
+
+    function greet() {
+    console.log("Hello!");
+    }
+    console.log(typeof greet);  // "function"
+    
+#### **undefined**
+
+    let x;
+    console.log(typeof x);  // "undefined"
+
+#### **null**
+**객체**로 취급되는 특이한 경우입니다. 이는 **자바스크립트의 역사적 오류**로, 현재는 `null`이 객체 타입으로 반환되는 것을 알 수 있습니다.
+
+    let y = null;
+    console.log(typeof y);  // "object" (역사적 오류)
+
+
+
+## 참고 문헌
+
+ - [codeit](https://www.codeit.kr/) 
+ - [chatgpt](https://chatgpt.com/) 
