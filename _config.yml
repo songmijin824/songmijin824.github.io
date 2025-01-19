@@ -125,6 +125,9 @@ navigation_header:
   url: /
 - title: Blog
   url: /blog/
+- title: categories
+  url: /categories/
+  
   
 navigation_footer:
 - title: Created by David Darnes
