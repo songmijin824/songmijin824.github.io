@@ -124,8 +124,6 @@ navigation_header:
 - title: Home
   url: /
 - title: Blog
-  url: /blog/
-- title: categories
   url: /categories/
   
   
