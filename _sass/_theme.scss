@@ -28,7 +28,7 @@ body {
     @include flexbox;
     @include flex-direction(row);
     @include justify-content(space-between);
-    padding: 1rem 0;
+    padding: 1rem 5%;
     @include breakpoint(break-1) {
       @include align-items(center);
     }
@@ -115,7 +115,6 @@ body {
   min-width: 20%;
 }
 
-
 // Main content
 .main {
   @include flexbox;
@@ -123,12 +122,13 @@ body {
   @include flex(1, 0, auto);
   @include justify-content(flex-start);
   margin-bottom: 1.6rem;
+  padding-left:5%; padding-right:5%;
   @include breakpoint(break-1) {
-    @include justify-content(center);
+    @include justify-content(space-between);
     @include flex-direction(row);
   }
 }
-
+.layout-page .container {  width: 100%; }
 .header,
 .feature,
 .footer {
@@ -141,14 +141,19 @@ body {
     width: 62%;
   }
 }
-
+.layout-post .content,
+.layout-page .content {
+  @include breakpoint(break-1) {
+    width: 100%;
+  }
+}
 .share .button {
   margin-right: .3rem;
 }
 
 .aside {
   @include breakpoint(break-1) {
-    max-width: 34%;
+    max-width: 24%;
     margin-left: 4%;
     @include flex(1, 0, auto);
     opacity: 0.5;
@@ -185,6 +190,7 @@ body {
   .item--category {
     margin-left: 0;
   }
+  .item--post .article--post { display:flex; justify-content: space-between; align-items: center; }
 }
 
 .item {

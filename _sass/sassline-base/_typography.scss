@@ -107,14 +107,15 @@ a {
   ul, ol {
     @include baseline(zeta, $bodytype, 2, 2, all);
 
+    padding-left: 25px;
     li {
       font-feature-settings: 'kern', 'onum', 'liga';
       margin-left: 2rem;
 
+      
       @include breakpoint(break-1) {
         margin-left: 0;
       }
-
       ol, ul {
         padding-top: 1rem;
         margin-bottom: 1rem;
@@ -308,7 +309,6 @@ a {
     }
 
     @include breakpoint(break-1) {
-      margin-left: -1rem;
     }
   }
 
